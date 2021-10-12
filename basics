@@ -1,1 +1,73 @@
-Test
+Basics
+------
+
+First two characters should be shebang (#!) - This is executed via kernal system called execve() function
+
+So ./myscript with #!/bin/bash would be executed as /bin/bash ./myscript.sh
+
+Change scripts executable 'chmod u+x' (Adds execute(x) permission to user(u))
+
+Time command:
+-------------
+
+how much time taken for executing the command:
+
+[vivk@vivk ~]$ time find . -name vivek
+
+real	0m1.216s # how long it takes in realtime with stop watch
+user	0m0.253s #cpu time
+sys	0m0.348s # cpu time
+
+Variables in bash:
+------------------
+
+Variables in bash commands are given with symbol(=)
+No spaces should be given before or after =
+If there any special chars or spaces, value should be given in quotes
+
+Remove variables with unset command
+
+print variable with $var
+
+     echo myvar is $myvar
+     
+Make something as env variable
+
+    export myvar=something
+    
+To view vaiables which are exported:
+
+     export
+     
+ Grouping in bash:
+ -----------------
+ 
+ a=1
+ {
+ a=2
+ }
+ echo $a
+ #prints 2
+ 
+  a=1
+ (
+ a=2
+ )
+ echo $a
+ #prints 1
+ 
+ Bash builtins
+ -------------
+ 
+ To enable bash builtins
+        enable
+        
+  Example:
+  --------
+  a = 5
+  export a
+  echo $a #prints 5
+  
+  To see keywords in bash:
+  -------------------------
+       compgen -k

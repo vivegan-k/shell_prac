@@ -29,3 +29,32 @@ And then:
 exit
 
 
+Source:
+=======
+
+source example.sh or . example.sh
+
+It is "dot space" as a short way to source a script
+
+The shell executed the scrip in the shell's own process instead of in a new process
+
+Souring is a common way to import variable assignments or functions
+
+Alias:
+=====
+
+alias ll="ls -l"
+
+alias copy=cp
+
+alias mroe=more
+
+To list available alias: `alias`
+
+To set alias permanently:
+-------------------------
+Set it in .bashrc file (alias v=vim)
+source .bashrc
+
+
+

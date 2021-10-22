@@ -1,0 +1,31 @@
+Bash_startup
+============
+
+.bash_profile is read when Bash is invoked as a login shell
+
+.bashrc is executed when a new shell is started
+
+If you extend an exported variable like PATH in .bashrc, it will grow with each nested shell invocation
+
+PATH=$PATH:/usr/local/bin
+
+Example:
+--------
+Add following line in .bashrc : export xyz=$xyz:some-stuff
+
+And then:
+[vivk@vivk ~]$ vi .bashrc 
+[vivk@vivk ~]$ echo $xyz
+
+[vivk@vivk ~]$ bash
+[vivk@vivk ~]$ echo $xyz
+:some-stuff
+[vivk@vivk ~]$ echo $xyz
+:some-stuff
+[vivk@vivk ~]$ bash
+[vivk@vivk ~]$ echo $xyz
+:some-stuff:some-stuff
+[vivk@vivk ~]$ exit
+exit
+
+

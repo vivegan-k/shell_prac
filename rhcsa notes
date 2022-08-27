@@ -1,1 +1,40 @@
+Basic commands:
+==============
+$ whoami # Returns current user
+-------------------------------
+[vivk@vivk ~]$ whoami
+vivk
+
+$ date # Returns current date
+-----------------------------
+[vivk@vivk ~]$ date
+Sat Aug 27 19:36:19 IST 2022
+[vivk@vivk ~]$ date +%F
+2022-08-27
+[vivk@vivk ~]$ date +%R
+19:36
+[vivk@vivk ~]$ date +%x
+08/27/2022
+
+$ passwd # Changes password for current user
+--------------------------------------------
+vivk@vivk ~]$ passwd
+Changing password for user vivk.
+Current Password: 
+
+$ cat <filename> #prints content of a file
+------------------------------------------
+[vivk@vivk ~]$ cat test.py 
+input1 = input()
+input2 = input()
+input3 = input()
+
+[vivk@vivk ~]$ cat test.py test2.py 
+input1 = input()
+input2 = input()
+input3 = input()
+
+def test():
+  result = (int(input1[-3]) * int(input2[-2])) - max(map(int, list(input3)))
+  return result
 
